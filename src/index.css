@@ -1,68 +1,125 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
   :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+    --background: 260 20% 7%;
+    --foreground: 260 10% 98%;
+    --card: 260 15% 10%;
+    --card-foreground: 260 10% 98%;
+    --popover: 260 15% 10%;
+    --popover-foreground: 260 10% 98%;
+    --primary: 252 100% 67%;
+    --primary-foreground: 260 10% 98%;
+    --secondary: 290 70% 50%;
+    --secondary-foreground: 260 10% 98%;
+    --muted: 260 15% 15%;
+    --muted-foreground: 260 10% 70%;
+    --accent: 330 80% 50%;
+    --accent-foreground: 260 10% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 260 15% 20%;
+    --input: 260 15% 20%;
+    --ring: 252 100% 67%;
+    --chart-1: 252 100% 67%;
+    --chart-2: 290 70% 50%;
+    --chart-3: 330 80% 50%;
+    --chart-4: 210 100% 60%;
+    --chart-5: 120 80% 60%;
+    --radius: 0.5rem;
+    --sidebar-background: 260 20% 5%;
+    --sidebar-foreground: 260 10% 98%;
+    --sidebar-primary: 252 100% 67%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 290 70% 50%;
+    --sidebar-accent-foreground: 260 10% 98%;
+    --sidebar-border: 260 15% 20%;
+    --sidebar-ring: 252 100% 67%;
   }
 }
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Disco light animations */
+@keyframes disco1 {
+  0%, 100% { box-shadow: 0 0 20px 10px rgba(255, 0, 128, 0.7); }
+  25% { box-shadow: 0 0 20px 10px rgba(128, 0, 255, 0.7); }
+  50% { box-shadow: 0 0 20px 10px rgba(0, 128, 255, 0.7); }
+  75% { box-shadow: 0 0 20px 10px rgba(255, 0, 255, 0.7); }
+}
+
+@keyframes disco2 {
+  0%, 100% { box-shadow: 0 0 20px 10px rgba(0, 255, 128, 0.7); }
+  25% { box-shadow: 0 0 20px 10px rgba(255, 255, 0, 0.7); }
+  50% { box-shadow: 0 0 20px 10px rgba(255, 128, 0, 0.7); }
+  75% { box-shadow: 0 0 20px 10px rgba(0, 255, 255, 0.7); }
+}
+
+@keyframes disco3 {
+  0%, 100% { box-shadow: 0 0 20px 10px rgba(255, 0, 0, 0.7); }
+  25% { box-shadow: 0 0 20px 10px rgba(0, 0, 255, 0.7); }
+  50% { box-shadow: 0 0 20px 10px rgba(255, 255, 0, 0.7); }
+  75% { box-shadow: 0 0 20px 10px rgba(0, 255, 0, 0.7); }
+}
+
+.disco-light-1 {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  animation: disco1 3s infinite;
+}
+
+.disco-light-2 {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  animation: disco2 4s infinite;
+}
+
+.disco-light-3 {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  animation: disco3 5s infinite;
+}
+
+/* Map marker styles */
+.map-marker-live {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ff3b30;
+  box-shadow: 0 0 10px 3px rgba(255, 59, 48, 0.6);
+  border: 2px solid white;
+}
+
+.map-marker-soon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ffcc00;
+  box-shadow: 0 0 10px 3px rgba(255, 204, 0, 0.6);
+  border: 2px solid white;
+}
+
+.map-marker-upcoming {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #34c759;
+  box-shadow: 0 0 10px 3px rgba(52, 199, 89, 0.6);
+  border: 2px solid white;
+}
+  
