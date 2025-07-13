@@ -1,73 +1,48 @@
-Click for live demo:
-https://bit.ly/VeresUsApp
+# VerseUs – Your AI-Powered Concert & Music Companion
 
+**VerseUs** is an immersive music experience app that blends AI, AR, and concert discovery into one platform. 
+It enables users to generate lyrics, explore live music, and simulate concert vibes in real time — creating a deeper, more emotional way to engage with music.
 
-# React + TypeScript + Vite
+[Live Demo](https://bit.ly/VeresUsApp)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+## What It Does
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Artist Explorer** – Discover artists via YouTube and Spotify previews  
+- **Mood-Based Lyric Generator** – Enter your emotion, get original AI-generated lyrics  
+- **Geo-Synced Music Map** – Explore real concerts via Spotify + Ticketmaster  
+- **Concert Effect** – Immersive concert vibe simulator using artist/song input  
+- **Settings Page** – HTML/CSS/JS preferences panel for genre, mood, and alerts  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tech Stack
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+| Category       | Tools/Tech Used                                  
+|----------------|--------------------------------------------------
+| Frontend       | React, TypeScript, HTML,CSS                          
+| Styling        | Tailwind CSS, Lucide Icons                       
+| APIs           | Spotify, YouTube, Ticketmaster, OpenAI, Instagram
+| Linting & Dev  | ESLint,Vite, React Router DOM               
+| Prototyping    | Gamma, Visual AI Tools (for UX & layout logic)  
+| Hosting        | Visual Code Studio (live demo), GitHub                       
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## How We Built It
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- Developed with React + TypeScript using Vite for fast builds  
+- Integrated 5 APIs for dynamic music, lyrics, video, and event data  
+- Used Tailwind for fast, responsive UI  
+- Built and tested mobile-first  
+- Visual AI tools helped speed up layout logic and UX prototyping  
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Team
+	•	Vedesh Makanaboyina – Product Strategy, Full-Stack Integration,  git, github, UI/UX Design
+	•	Hansika – UI/UX Design, Artist Discovery Logic,React.js,  git, github
+	•	Hrishita – AI Lyric Flow & Emotional Input Mapping, typescript,  git, github, UI/UX Design
+	•	Tanvi – Concert Data Visualization & Map Integration, CSS, git, github, UI/UX Design
+
