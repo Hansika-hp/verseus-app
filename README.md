@@ -42,7 +42,10 @@ It enables users to generate lyrics, explore live music, and simulate concert vi
 
 Team
 Vedesh – Product Strategy, Full-Stack Integration,  git, github, UI/UX Design
+
 Hansika – UI/UX Design, Artist Discovery Logic,React.js,  git, github
+
 Hrishita – AI Lyric Flow & Emotional Input Mapping, typescript,  git, github, UI/UX Design
+
 Tanvi – Concert Data Visualization & Map Integration, CSS, git, github, UI/UX Design
 
