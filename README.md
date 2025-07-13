@@ -25,7 +25,7 @@ It enables users to generate lyrics, explore live music, and simulate concert vi
 | Styling        | Tailwind CSS, Lucide Icons                       
 | APIs           | Spotify, YouTube, Ticketmaster, OpenAI, Instagram
 | Linting & Dev  | ESLint,Vite, React Router DOM               
-| Prototyping    | Gamma, Visual AI Tools (for UX & layout logic)  
+| Prototyping    | Visual AI Tools (for UX & layout logic)  
 | Hosting        | Visual Code Studio (live demo), GitHub                       
 
 ---
